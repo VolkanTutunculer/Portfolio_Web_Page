@@ -110,11 +110,11 @@ function getFileIcon(fileName) {
     if (fileName === "Welcome")
         return `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M11.5 1.5L5.76 5.76L2.72 3.4L1.5 4.16V11.84L2.72 12.6L5.76 10.24L11.5 14.5L14.5 13.12V2.88L11.5 1.5ZM11.5 11.72L6.48 8L11.5 4.28V11.72Z" fill="#007ACC" /></svg>`;
     if (fileName.endsWith(".js"))
-        return `<img src="/img/file_type_js.svg" width="16" height="16">`;
+        return `<img src="img/file_type_js.svg" width="16" height="16">`;
     if (fileName.endsWith(".json"))
-        return `<img src="/img/file_type_json.svg" width="16" height="16">`;
+        return `<img src="img/file_type_json.svg" width="16" height="16">`;
     if (fileName.endsWith(".md"))
-        return `<img src="/img/file_type_markdown.svg" width="16" height="16">`;
+        return `<img src="img/file_type_markdown.svg" width="16" height="16">`;
 
     return `<img src="img/default_folder.svg" width="16" height="16">`;
 }
