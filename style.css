@@ -45,6 +45,7 @@ body {
   color: var(--vscode-fg);
   overflow: hidden;
   height: 100vh;
+  height: 100dvh;
 }
 
 /* Main Container */
@@ -53,6 +54,7 @@ body {
   grid-template-columns: 48px 250px 1fr;
   grid-template-rows: 30px 1fr 22px;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
   position: relative;
 }
@@ -990,4 +992,6 @@ body.light-theme .icon-folder {
     .status-bar-item .icon {
         display: block !important; /* İkonları zorla göster */
     }
+
+    
 }
