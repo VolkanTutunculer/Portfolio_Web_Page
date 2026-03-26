@@ -103,6 +103,7 @@ function toggleMobileMenu() {
     }
 }
 
+
 hamburgerBtn.addEventListener("click", toggleMobileMenu);
 sidebarOverlay.addEventListener("click", toggleMobileMenu);
 
