@@ -929,3 +929,65 @@ body.light-theme .icon-folder {
   width: 16px;
   height: 16px;
 }
+
+/* ==============================
+   Mobil Ekranlar İçin Responsive Düzen
+   (600px ve altı)
+============================== */
+@media (max-width: 600px) {
+    /* Genel Container */
+    #container {
+        flex-direction: column; /* Sidebar ve İçerik alt alta gelsin */
+        height: 100vh; /* Tam ekran yüksekliği */
+    }
+
+    /* Sidebar (Dosya Gezgini) */
+    .sidebar {
+        width: 100%; /* Tüm genişliği kapla */
+        max-width: none;
+        height: auto;
+        min-height: 50vh; /* Ekranın en az yarısını kapla */
+        border-right: none;
+        border-bottom: 1px solid var(--sidebar-border);
+        position: relative;
+    }
+
+    /* Ana İçerik Alanı (Editor) */
+    .main-content {
+        flex: 1; /* Kalan alanı kapla */
+        height: auto;
+    }
+
+    /* Sekmeler */
+    .editor-container .tabs {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--tabs-border);
+    }
+
+    /* Alttaki Bar (Status Bar) */
+    .status-bar {
+        position: fixed; /* Mobilde alta sabitle */
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Tüm genişlik */
+        height: 22px; /* Standart yükseklik */
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-start; /* İçeriği sola hizala */
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    /* Status Bar İkonları ve Metinleri */
+    .status-bar-item {
+        margin-right: 15px;
+        display: flex; /* İkon ve metni yan yana getir */
+        align-items: center;
+        gap: 5px;
+    }
+
+    .status-bar-item .icon {
+        display: block !important; /* İkonları zorla göster */
+    }
+}
