@@ -91,12 +91,16 @@
                         <circle cx="12" cy="7" r="4" />
                     </svg>
                 </div>
-                <div class="activity-bar-item" title="Manage">
+                <div class="activity-bar-item" title="Manage" id="settings-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="3" />
                         <path
                             d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
                     </svg>
+                    <div class="context-menu" id="settings-menu">
+                        <div class="context-menu-item" data-theme="dark">Dark Theme</div>
+                        <div class="context-menu-item" data-theme="light">Light Theme</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,8 +112,8 @@
             <div class="sidebar-content">
                 <div class="file-tree">
                     <div class="file-tree-item folder indent-0" style="cursor: default;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-folder">
-                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                        <img src="/img/default_folder.svg" width="16" height="16" class="icon-folder">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                         </svg>
                         <span>VOLKAN_WILLIAM_TUTUNCULER</span>
                     </div>
@@ -119,43 +123,26 @@
                             <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
                                 <path d="M5.2 3.9l1.4-1.4 5.5 5.5-5.5 5.5-1.4-1.4 4.1-4.1z" />
                             </svg>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                class="icon-folder">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                            <img src="/img/default_folder.svg" width="16" height="16" class="icon-folder">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                             </svg>
                             <span>EXPERIENCE</span>
                         </div>
                         <div class="folder-contents">
                             <div class="file-tree-item indent-2" data-file="Pedogist.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>Pedogist.js</span>
                             </div>
                             <div class="file-tree-item indent-2" data-file="EQ_Bank.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>EQ_Bank.js</span>
                             </div>
                             <div class="file-tree-item indent-2" data-file="ITM_TechSoft_1.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>ITM_TechSoft_1.js</span>
                             </div>
                             <div class="file-tree-item indent-2" data-file="ITM_TechSoft_2.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>ITM_TechSoft_2.js</span>
                             </div>
                         </div>
@@ -166,19 +153,12 @@
                             <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
                                 <path d="M5.2 3.9l1.4-1.4 5.5 5.5-5.5 5.5-1.4-1.4 4.1-4.1z" />
                             </svg>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                class="icon-folder">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                            </svg>
+                            <img src="/img/default_folder.svg" width="16" height="16" class="icon-folder">
                             <span>SKILLS</span>
                         </div>
                         <div class="folder-contents">
                             <div class="file-tree-item indent-2" data-file="TechStack.json">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#5ba709" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_json.svg" width="16" height="16">
                                 <span>TechStack.json</span>
                             </div>
                         </div>
@@ -189,37 +169,23 @@
                             <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
                                 <path d="M5.2 3.9l1.4-1.4 5.5 5.5-5.5 5.5-1.4-1.4 4.1-4.1z" />
                             </svg>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                class="icon-folder">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                            </svg>
+                            <img src="/img/default_folder.svg" width="16" height="16" class="icon-folder">
                             <span>EDUCATION</span>
                         </div>
                         <div class="folder-contents">
                             <div class="file-tree-item indent-2" data-file="Centennial_College.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>Centennial_College.js</span>
                             </div>
                             <div class="file-tree-item indent-2" data-file="Ege_University.js">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16"
-                                    height="16">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                    <polyline points="14 2 14 8 20 8" />
-                                </svg>
+                                <img src="/img/file_type_js.svg" width="16" height="16">
                                 <span>Ege_University.js</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="file-tree-item indent-1" data-file="README.md" style="margin-top: 8px;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#519aba" stroke-width="2" width="16" height="16">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                            <polyline points="14 2 14 8 20 8" />
-                        </svg>
+                        <img src="img/file_type_markdown.svg" width="16" height="16">
                         <span>README.md</span>
                     </div>
 

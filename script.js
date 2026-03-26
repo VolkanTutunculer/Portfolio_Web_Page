@@ -110,12 +110,13 @@ function getFileIcon(fileName) {
     if (fileName === "Welcome")
         return `<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M11.5 1.5L5.76 5.76L2.72 3.4L1.5 4.16V11.84L2.72 12.6L5.76 10.24L11.5 14.5L14.5 13.12V2.88L11.5 1.5ZM11.5 11.72L6.48 8L11.5 4.28V11.72Z" fill="#007ACC" /></svg>`;
     if (fileName.endsWith(".js"))
-        return `<svg viewBox="0 0 24 24" fill="none" stroke="#f1dd3f" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+        return `<img src="/img/file_type_js.svg" width="16" height="16">`;
     if (fileName.endsWith(".json"))
-        return `<svg viewBox="0 0 24 24" fill="none" stroke="#5ba709" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+        return `<img src="/img/file_type_json.svg" width="16" height="16">`;
     if (fileName.endsWith(".md"))
-        return `<svg viewBox="0 0 24 24" fill="none" stroke="#519aba" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
-    return "";
+        return `<img src="/img/file_type_markdown.svg" width="16" height="16">`;
+
+    return `<img src="img/default_folder.svg" width="16" height="16">`;
 }
 
 function openFileHelper(fileName) {
@@ -241,3 +242,35 @@ window.addEventListener("resize", () => {
 });
 
 render();
+
+// --- THEME SWITCHER & SETTINGS MENU ---
+const settingsIcon = document.getElementById('settings-icon');
+const settingsMenu = document.getElementById('settings-menu');
+
+if (settingsIcon && settingsMenu) {
+    settingsIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); // Tıklamanın body'ye ulaşmasını engeller
+        settingsMenu.classList.toggle('show');
+    });
+
+    // Menü dışına tıklandığında menüyü kapat
+    document.addEventListener('click', () => {
+        if (settingsMenu.classList.contains('show')) {
+            settingsMenu.classList.remove('show');
+        }
+    });
+
+    // Tema değiştirme butonlarını dinle
+    const themeOptions = document.querySelectorAll('.context-menu-item');
+    themeOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const theme = e.target.getAttribute('data-theme');
+
+            if (theme === 'light') {
+                document.body.classList.add('light-theme');
+            } else {
+                document.body.classList.remove('light-theme');
+            }
+        });
+    });
+}
